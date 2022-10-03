@@ -1,1 +1,2 @@
 I'm a Hello World text file.
+Version 2: some minor changes
