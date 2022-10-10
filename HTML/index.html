@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div id="headingsArea"></div>
     <h1>I'm a Heading1</h1>
     <h2>I'm a Heading2</h2>
     <h3>I'm a Heading3</h3>
@@ -26,7 +27,7 @@
     <span>I'm an inline element</span>
     <span>I'm another inline element</span>
 
-    <p>Order list with type="1"</p>
+    <p id="listsArea">Order list with type="1"</p>
     <ol type="1">
         <li>Item1</li>
         <li>Item2</li>
@@ -142,6 +143,107 @@
         <dt>Item3 title</dt>
         <dd>Item3 is a ...</dd>
     </dl>
+
+    <p>This is an <em>emphasized</em> text</p>
+    <p>This is an <strong>important</strong> text</p>
+    <p>This is <b>some</b> text</p>
+    <p>This is <i>some</i> text</p>
+    <p>This is <u>some</u> text</p>
+
+    <a href="contact.html">Go to Contact page</a>
+    <p>Go to <a href="contact.html">Contact</a> page</p>
+
+    <a href="pages/contact.html">Go to Contact page (child)</a>
+    <br>
+    <a href="https://www.google.ro/" target="_blank">Redirect to Google</a>
+    <br>
+    <a href="#headingsArea">Redirect to internal headings</a>
+    <a href="#listsArea">Redirect to internal lists</a>
+    <br>
+    <a href="pages/contact.html#usefullInfo">Go to usefull info from pages/contact.html</a>
+    <br>
+    <a href="resources/Resource1.zip">Download Resource1 zip file</a>
+    <br><br>
+
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="Substitute text" width="183"
+        height="275">
+    <img src="images/image1.jpg">
+
+    <br>
+    <br>
+    <br>
+
+    <table border="2">
+        <tr>
+            <td colspan="2">Cell 1,1</td>
+            <!-- <td>Cell 1,2</td> -->
+        </tr>
+        <tr>
+            <td rowspan="2">Cell 2,1</td>
+            <td>Cell 2,2</td>
+        </tr>
+        <tr>
+            <td>Cell 3,2</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <form>
+        <input name="id" type="hidden" value="123456" />
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" />
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" />
+        <br>
+        <br>
+
+        <input type="submit" value="Login" />
+        <input type="reset" value="Cancel" />
+    </form>
+
+    <br>
+    <br>
+
+    <form>
+        <input name="id" type="hidden" value="123456" />
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" />
+        <textarea name="comments" cols="30" rows="5">Some text...</textarea>
+        <textarea name="comments" cols="30" rows="5" readonly="readonly">Some readonly text...</textarea>
+        <br>
+        <br>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Cancel" />
+    </form>
+
+    <br>
+    <br>
+
+    <form>
+        <input name="id" type="hidden" value="123456" />
+        <label for="searchByType">Search by type:</label>
+        <select name="searchByType">
+            <option value="Skoda">Skoda</option>
+            <option value="BMW" selected>BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Opel">Opel</option>
+        </select>
+        <select multiple name="searchByColor">
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Black" selected>Black</option>
+        </select>
+        <br>
+        <br>
+
+        <input type="submit" value="Search" />
+        <input type="reset" value="Cancel" />
+    </form>
+
 </body>
 
 </html>
