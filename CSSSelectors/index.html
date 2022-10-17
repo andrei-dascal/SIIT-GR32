@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Selectors</title>
+    <style>
+        /* p {
+            color: red;
+        } */
+
+        /* #paragraphContainer {
+            color: red;
+        } */
+
+        /* .paragraphContainer {
+            color: blue;
+        } */
+
+        /* #blueParagraph1, #blueParagraph2, #blueParagraph3 {
+            color: blue;
+        } */
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+        } */
+
+        div ~ p {
+            color: green;
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css"></link> -->
+</head>
+
+<body>
+    <h1>Inline styles</h1>
+    <p style="color:blue">This is a paragraph</p>
+    <hr>
+    <h1>Embedded styles</h1>
+    <p>This is a paragraph</p>
+    <hr>
+    <h1>External styles</h1>
+    <p>This is a paragraph</p>
+    <hr>
+    <h1>Simple selectors</h1>
+    <div id="paragraphContainer" class="paragraph-container">
+        <p id="blueParagraph1">First paragraph</p>
+        <p id="blueParagraph2">Second paragraph</p>
+        <p>Third paragraph</p>
+        <p id="blueParagraph3">Fourth paragraph</p>
+    </div>
+    <p>Another p</p>
+    <p>Another p</p>
+    <p>Another p</p>
+    <hr>
+    <h1>Combinators selectors</h1>
+    <div>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <section>
+            <p>Fourth paragraph</p>
+        </section>
+    </div>
+    <p>Third paragraph</p>
+
+</body>
+
+</html>
