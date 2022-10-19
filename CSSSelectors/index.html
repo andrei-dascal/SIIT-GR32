@@ -25,8 +25,55 @@
             padding: 0px;
         } */
 
-        div ~ p {
+        /* div ~ p {
             color: green;
+        } */
+
+        /* p[class*=attribute] {
+            color: red;
+        } */
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        a:active {
+            color: green;
+        }
+        
+        .button {
+            background-color: orange;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .button:hover {
+            background-color: brown;
+            cursor: pointer;
+        }
+
+        .paragraph-element::first-line {
+            color: red;
+        }
+
+        q::before {
+            content: "<<";
+            color: blue;
+        }
+
+        q::after {
+            content: ">>";
+            color: blue;
         }
     </style>
 
@@ -63,7 +110,25 @@
         </section>
     </div>
     <p>Third paragraph</p>
-
+    <hr>
+    <h1>Attribute selectors</h1>
+    <div>
+        <p class="attribute-smthg attribute attribute1">First paragraph</p>
+        <p class="attribute2 attribute">Second paragraph</p>
+        <p>Third paragraph</p>
+        <p class="attribute4">Fourth paragraph</p>
+    </div>
+    <hr>
+    <h1>Pseudo classes</h1>
+    <div>
+        <a href="https://www.google.ro/" target="_blank">Go to Google</a>
+        <div class="button">Click me</div>
+    </div> 
+    <h1>Pseudo elements</h1>
+    <div>
+        <p class="paragraph-element">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore debitis magni et autem dolores cupiditate quo, perferendis laudantium ad vitae, provident consectetur recusandae ipsa, doloremque totam nisi libero laborum illum dolor? Rerum doloremque sint perspiciatis cum tenetur earum? Architecto, sapiente! Modi fugiat illum error porro distinctio asperiores ipsum eum repellat nam? Ad amet odio eos voluptatibus? Nostrum magnam iure ipsum illum minima possimus, fugiat nobis nisi enim aliquid expedita sit inventore quam tempora! Totam quasi dicta, debitis voluptates, consectetur, enim officiis error iste praesentium deleniti laborum quis delectus sit magni fugiat ipsa vitae quaerat blanditiis asperiores pariatur! Mollitia, minima vitae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis cumque odit earum, provident, iste voluptate nobis similique at corrupti, sint sit aliquam doloremque necessitatibus architecto. Consequatur voluptatibus harum dicta ducimus?</p>
+        <q>Some quotes</q>, he said, <q>are better than none</q>
+    </div>   
 </body>
 
 </html>
