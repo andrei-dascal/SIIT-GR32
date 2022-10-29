@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .animation-container {
+                width: 200px;
+                height: 200px;
+                position: relative;
+                background-color: blue;
+                animation-name: changePosition;
+                animation-duration: 4s;
+                /* animation-delay: 3s; */
+                animation-direction: alternate-reverse;
+                animation-iteration-count: infinite;
+                /* animation-iteration-count: 3; */
+            }
+
+            @keyframes changeBackgroundColor {
+                0% {background-color: pink;}
+                25% {background-color: red;}
+                50% {background-color: green;}
+                100% {background-color: black;}
+            }
+
+            @keyframes changePosition {
+                0% {background-color: pink; left: 0px; top: 0px; }
+                25% {background-color: red; left: 300px; top: 0px;  }
+                50% {background-color: green; left: 300px; top: 150px; }
+                75% {background-color: black; left: 0px; top: 150px;}
+                100% {background-color: black; left: 0px; top: 0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Animations</h1>
+        <div class="animation-container"></div>
+    </body>
+</html>

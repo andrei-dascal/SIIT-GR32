@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .multiple-properties-transition {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: width 4s, height 8s;
+        }
+
+        .multiple-properties-transition:hover {
+            width: 400px;
+            height: 400px;
+        }
+
+        .effect-container {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            background-color: blue;
+            /* transition: width 3s; */
+            transition-property: width;
+            transition-duration: 3s;
+            transition-delay: 2s;
+        }
+
+        .linear-effect {
+            transition-timing-function: linear;
+        }
+
+        .ease-effect {
+            transition-timing-function: ease;
+        }
+
+        .ease-in-effect {
+            transition-timing-function: ease-in;
+        }
+
+        .ease-out-effect {
+            transition-timing-function: ease-out;
+        }
+
+        .ease-in-out-effect {
+            transition-timing-function: ease-in-out;
+        }
+
+        .effect-container:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transition</h1>
+    <div class="multiple-properties-transition"></div>
+    <br>
+    <div class="effect-container linear-effect">Linear</div>
+    <div class="effect-container ease-effect">Ease</div>
+    <div class="effect-container ease-in-effect">Ease-In</div>
+    <div class="effect-container ease-out-effect">Ease-Out</div>
+    <div class="effect-container ease-in-out-effect">Ease-In-Out</div>
+</body>
+
+</html>
