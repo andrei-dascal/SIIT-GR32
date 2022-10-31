@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-areas: 
+                "headerArea headerArea headerArea"
+                "bannerArea bannerArea bannerArea"
+                "menuArea mainArea asideArea"
+                "menuArea mainArea mainArea"
+                "footerArea footerArea footerArea";
+                background-color: grey;
+                gap: 12px;
+            }
+
+            .header {
+                grid-area: headerArea;
+            }
+
+            .banner {
+                grid-area: bannerArea;
+            }
+
+            .vertical-menu {
+                grid-area: menuArea;
+            }
+
+            .main-content {
+                grid-area: mainArea;
+            }
+
+            .aside-content {
+                grid-area: asideArea;
+            }
+
+            .footer {
+                grid-area: footerArea;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="header">Header</div>
+            <div class="banner">Banner</div>
+            <div class="vertical-menu">Menu</div>
+            <div class="main-content">Main</div>
+            <div class="aside-content">Aside</div>
+            <div class="footer">Footer</div>
+        </div>
+    </body>
+</html>
