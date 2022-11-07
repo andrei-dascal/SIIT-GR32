@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .title {
+            font-size: 10px;
+            color: red;
+        }
+
+        .sub-heading {
+            display: none;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .title {
+                font-size: 14px;
+            }
+
+            .sub-heading {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .title {
+                font-size: 16px;
+            }
+
+            /* .sub-heading {
+                display: block;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Responsive Web Design</h1>
+    <p class="sub-heading">Some sub heading goes here</h1>
+</body>
+
+</html>
