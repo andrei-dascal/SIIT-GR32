@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: gray;
+            align-items: center;
+            padding: 12px 20px;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .header .actions-icon {
+            display: none;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .header nav a:hover {
+            background-color: darkgrey;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .header .actions-icon {
+                display: block;
+            }
+
+            .header .actions-group {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="../CSSFlexbox/images/logo.png">
+        <nav class="actions-group">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+        <div class="actions-icon">
+            <a class="fa fa-bars"></a>
+        </div>
+    </header>
+</body>
+
+</html>
