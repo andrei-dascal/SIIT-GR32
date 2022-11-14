@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+    <script>
+        // console.log("Inside head");
+        
+        //It's all right. Javascript is "not" that scary.
+        console.log("It's all right. Javascript is \"not\" that scary.");
+
+        var numberA = 33;
+        var numberB = '33';
+        console.log(numberA + numberB);
+
+        console.log("Are equal? == ", numberA == numberB);
+        console.log("Are equal? === ", numberA === numberB);
+
+        console.log(typeof numberA);
+        console.log(typeof numberB);
+
+        var undefinedVariable;
+        console.log(undefinedVariable);
+        console.log(typeof undefinedVariable);
+
+        undefinedVariable = 30;
+        console.log(undefinedVariable);
+
+        undefinedVariable = null;
+        console.log(undefinedVariable);
+
+        var isEligible = numberA > 18;
+        console.log("IsEligible: ", isEligible);
+
+        // var isNotEligible = !(isEligible);
+        // var isNotEligible = !(numberA > 18);
+        // var isNotEligible = numberA <= 18;
+        var isNotEligible = !(numberA > 18);
+        console.log("IsNotEligible: ", isNotEligible);
+
+        // var openParanthesize = !(numberA > 18 || numberB == '34');
+        var openParanthesize = numberA <= 18 && numberB != '34';
+        console.log("OpeParanthesize: ", openParanthesize);
+        
+    </script>
+    <!-- <script src="js/demo.js"></script> -->
+</head>
+<body>
+    <!-- <script>
+        console.log("Inside body");
+    </script>
+    <script src="js/demo.js"></script> -->
+</body>
+</html>
