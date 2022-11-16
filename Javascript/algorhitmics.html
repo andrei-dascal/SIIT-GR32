@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var numberArray = [5, 15, 1, 3, 4, 75, 25, 6, 7, 11, 6, 2, 100, 90, 76];
+
+        //Problem1: Return the first n elements from an array
+
+        // var n = 20;
+        var n = 4;
+
+        for (var i = 0; i < n; i++) {
+            console.log("Problem1 - V1: ", numberArray[i]);
+        }
+
+        for (var i = 0; i < numberArray.length; i++) {
+            if (i === n)
+                break;
+
+            console.log("Problem1 - V2: ", numberArray[i]);
+        }
+
+        //Problem2: Find min/max from an array on numbers
+
+        var minNumber = numberArray[0];
+        var maxNumber = numberArray[0];
+
+        for (var i = 1; i < numberArray.length; i++) {
+            if (minNumber > numberArray[i])
+                minNumber = numberArray[i];
+
+            if (maxNumber < numberArray[i])
+                maxNumber = numberArray[i];
+        }
+
+        console.log("Min number is: ", minNumber);
+        console.log("Max number is: ", maxNumber);
+
+        //Problem3 FizzBuzz game: if divide by 3 => fizz, if divide by 5 => buzz, if divide by 15 => FizzBuzz
+
+        for (var i = 0; i < numberArray.length; i++) {
+            if (numberArray[i] % 15 === 0)
+                console.log("fizzbuzz");
+            else if (numberArray[i] % 3 === 0)
+                console.log("buzz")
+            else if (numberArray[i] % 5 === 0)
+                console.log("fizz")
+            else
+                console.log(numberArray[i]);
+        }
+
+        //Problem4 From a list o persons (a person is defined by name, age, location). Only those over 18 and from a specific location can vote.
+
+        var person1 = {
+            name: "Andrei",
+            age: 20,
+            location: "Cluj-Napoca"
+        };
+
+        var person2 = {
+            name: "Maria",
+            age: 19,
+            location: "Cluj-Napoca"
+        };
+
+        var person3 = {
+            name: "Sorin",
+            age: 15,
+            location: "Cluj-Napoca"
+        };
+
+        var person4 = {
+            name: "Andreea",
+            age: 20,
+            location: "Arad"
+        };
+
+        var person5 = {
+            name: "Liviu",
+            age: 15,
+            location: "Oradea"
+        };
+
+        var city = "Cluj-Napoca";
+
+        var personList = [person1, person2, person3, person4, person5];
+
+        for (var i = 0; i < personList.length; i++) {
+            var person = personList[i];
+
+            if (person.location === city && person.age > 18)
+                console.log(`${person.name} from ${person.location} can vote!`);
+        }
+
+        for (var person of personList) {
+            if (person.location === city && person.age > 18)
+                console.log(`${person.name} from ${person.location} can vote!`);
+        }
+
+        //Problem5 From a list of strings create only one string with dashes between values
+        var fruits = ['Apple', 'Orange', 'Banana'];
+
+        var sentence = '';
+
+        for (var i = 0; i < fruits.length; i++) {
+            console.log("problem5: ", i, sentence);
+
+            sentence = sentence + fruits[i];
+
+            console.log("problem5: ", i, sentence);
+
+            if (i === fruits.length - 1)
+                continue;
+
+            sentence = sentence + "-";
+            console.log("problem5: ", i, sentence);
+        }
+
+        console.log("problem5: ", sentence);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

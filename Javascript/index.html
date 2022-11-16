@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Javascript</title>
     <script>
         // console.log("Inside head");
-        
+
         //It's all right. Javascript is "not" that scary.
         console.log("It's all right. Javascript is \"not\" that scary.");
 
@@ -39,15 +40,76 @@
 
         // var openParanthesize = !(numberA > 18 || numberB == '34');
         var openParanthesize = numberA <= 18 && numberB != '34';
-        console.log("OpeParanthesize: ", openParanthesize);
-        
+        console.log("OpenParanthesize: ", openParanthesize);
+
+        console.log("-----16.11.2022-----");
+
+        //If a variable is array log "I'm an array", if a string log "I'm a string", if a number log "I'm a number", if a boolean log "I'm a boolean", if not log "I don't know your type"
+
+        var variableForTest = 22;
+
+        // console.log(typeof variableForTest);
+        //object not array
+
+        if (typeof variableForTest === "array") {
+            console.log("I'm an array");
+        } else if (typeof variableForTest === "string") {
+            console.log("I'm a string");
+        } else if (typeof variableForTest === "number") {
+            console.log("I'm a number");
+        } else if (typeof variableForTest === "boolean") {
+            console.log("I'm a boolean");
+        } else {
+            console.log("I don't know your type");
+        }
+
+        switch (typeof variableForTest) {
+            case 'string':
+                console.log("I'm a string");
+                break;
+            case 'number':
+                console.log("I'm a number");
+                break;
+            case 'boolean':
+                console.log("I'm a boolean");
+                break;
+            default:
+                console.log("I don't know your type");
+                break;
+        }
+
+        for (var index = 0; index < 5; index++) {
+            if (index % 2 !== 0)
+                continue;
+
+            // console.log(`Number ${index} bla bla`);
+
+            console.log("FOR - Number is: ", index);
+        }
+
+        var indexWhile = 0;
+
+        while (indexWhile < 5) {
+            console.log("WHILE - Number is: ", indexWhile);
+            indexWhile++;
+        }
+
+        var indexDoWhile = 0;
+
+        do {
+            console.log("DO WHILE - Number is: ", indexDoWhile);
+            indexDoWhile++;
+        }
+        while (indexDoWhile < 5);
     </script>
     <!-- <script src="js/demo.js"></script> -->
 </head>
+
 <body>
     <!-- <script>
         console.log("Inside body");
     </script>
     <script src="js/demo.js"></script> -->
 </body>
+
 </html>
