@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-color {
+            color: blue;
+        }
+
+        .font-size-xs {
+            font-size: 12px;
+        }
+    </style>
+    <script src="js/counter.js"></script>
+</head>
+
+<body>
+    <div>
+        <p id="paragraph" onclick="this.innerHTML = 'Changed on click'">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Asperiores soluta quam porro odio
+            inventore aliquam recusandae nostrum eligendi itaque nisi!</p>
+    </div>
+    <div>
+        <p id="paragraph2" onclick="changeText(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Asperiores soluta quam porro odio inventore aliquam
+            recusandae nostrum eligendi itaque nisi!</p>
+        <p id="paragraph3" class="main-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta quam porro odio
+            inventore aliquam recusandae nostrum eligendi itaque nisi!</p>
+        <p class="main-color font-size-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores soluta
+            quam porro odio inventore aliquam recusandae nostrum eligendi itaque nisi!</p>
+    </div>
+    <div>
+        <button type="button" onclick="increaseCounter()">Count</button>
+        <p id="counterIncrement">0</p>
+    </div>
+    <form name="loginForm" onsubmit="return validateForm()" method="post">
+        Username: <input type="text" name="username">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        console.log("---IDENTIFY ELEMENTS ON DOM---");
+        console.log("---getElementById---");
+        var elementByID = document.getElementById("paragraph");
+        console.log(elementByID);
+
+        console.log("---getElementsByTagName---");
+        var elementsByTag = document.getElementsByTagName("p");
+        console.log(elementsByTag);
+        console.log(elementsByTag[0]);
+
+        console.log("---getElementsByClassName---");
+        var elementsByClass = document.getElementsByClassName("main-color");
+        console.log(elementsByClass);
+        console.log(elementsByClass[0]);
+
+        console.log("---querySelector---");
+        var elementBySelector = document.querySelector("div p");
+        console.log(elementBySelector);
+
+        console.log("---querySelectorAll---");
+        var elementsBySelector = document.querySelectorAll("div p");
+        console.log(elementsBySelector);
+
+        console.log("---CHANGING ELEMENT VALUES ON DOM---");
+        console.log("---changeInnerText---");
+        //setTimeout not needed;
+        setTimeout(function () {
+            var element1ByID = document.getElementById("paragraph");
+            element1ByID.innerText = "<strong>New Text</strong>";
+        }, 3000);
+
+        setTimeout(function () {
+            var element2ByID = document.getElementById("paragraph2");
+            element2ByID.innerHTML = "<strong>New Text</strong>";
+        }, 3000);
+
+        console.log("---CHANGING CSS---");
+        var elementByID = document.getElementById("paragraph");
+        //elementByID.style.color = "blue";
+
+        var classes = elementByID.classList;
+        classes.add("main-color", "font-size-xs");
+
+        function changeText(element) {
+            element.innerHTML = 'Changed on click';
+        }
+
+        function increaseCounter() {
+            document.getElementById("counterIncrement").innerText = count();
+        }
+
+        function validateForm() {
+            var usernameInput = document.forms["loginForm"]["username"];
+
+            if(usernameInput.value == "")
+                alert("No value provided");
+        }
+
+        console.log("---Add Event Listener---");
+        document.getElementById("paragraph3").addEventListener("click", changeText(document.getElementById("paragraph3")));
+    </script>
+</body>
+
+</html>

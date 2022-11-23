@@ -7,5 +7,5 @@ var count = (function () {
     };
 })();
 
-count();
-count();
+// count();
+// count();
