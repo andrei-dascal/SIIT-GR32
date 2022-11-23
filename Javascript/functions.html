@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        //Test data
+        var prices = [1200, 100, 90, 800, 1000];
+
+        var vat = 0.19;
+
+        for (var i = 0; i < prices.length; i++) {
+            //var priceWithVAT = prices[i] + prices[i] * vat;
+            var priceWithVAT = calculatePriceWithVAT(prices[i], "Hungary");
+            console.log(priceWithVAT);
+        }
+
+        function calculatePriceWithVAT(price, country) {
+            if (country === "Hungary")
+                return price + price * 0.28;
+
+            if (country === "Romania" || country === "Germany")
+                return price + price * 0.19;
+
+            return price;
+        }
+
+        //Depends; Think if help to have a function;
+        function divide(number1, number2) {
+            if (number2 === 0)
+                return;
+
+            return number1 / number2;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
