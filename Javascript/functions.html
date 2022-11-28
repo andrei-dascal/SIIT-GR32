@@ -25,12 +25,39 @@
         }
 
         //Depends; Think if help to have a function;
-        function divide(number1, number2) {
+        let divideFunct1 = function divide(number1, number2) {
             if (number2 === 0)
                 return;
 
             return number1 / number2;
         }
+
+        //ARROW Functions
+        let divideFunct2 = (number1, number2) => {
+            if (number2 === 0)
+                return;
+
+            return number1 / number2;
+        }
+
+        let divideFunct3 = (number1, number2) =>  number1 / number2;
+
+        let helloWorld1 = name => "Hello World " + name;
+
+        let helloWorld2 = () => "Hello World";
+
+        //Spread operator as param in a function
+
+        function sum(...numbers) {
+            let result = 0;
+
+            numbers.forEach(number => result += number);
+
+            return result;
+        }
+
+        console.log(sum(1));
+        console.log(sum(1, 4, 5, 100, 23));
     </script>
 </head>
 

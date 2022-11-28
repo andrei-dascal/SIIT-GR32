@@ -30,13 +30,16 @@
             quam porro odio inventore aliquam recusandae nostrum eligendi itaque nisi!</p>
     </div>
     <div>
-        <button type="button" onclick="increaseCounter()">Count</button>
+        <button id="counterIncrementBtn" type="button" onclick="increaseCounter()">Count</button>
         <p id="counterIncrement">0</p>
     </div>
     <form name="loginForm" onsubmit="return validateForm()" method="post">
         Username: <input type="text" name="username">
         <input type="submit" value="Submit">
     </form>
+    <div id="container">
+
+    </div>
 
     <script>
         console.log("---IDENTIFY ELEMENTS ON DOM---");
@@ -82,9 +85,9 @@
         var classes = elementByID.classList;
         classes.add("main-color", "font-size-xs");
 
-        function changeText(element) {
-            element.innerHTML = 'Changed on click';
-        }
+        // function changeText(element) {
+        //     element.innerHTML = 'Changed on click';
+        // }
 
         function increaseCounter() {
             document.getElementById("counterIncrement").innerText = count();
@@ -97,8 +100,41 @@
                 alert("No value provided");
         }
 
+        function changeText() {
+            document.getElementById("paragraph3").innerHTML = 'Changed on click - version without params';
+
+            document.getElementById("paragraph3").removeEventListener("click", changeText);
+        }
+
         console.log("---Add Event Listener---");
-        document.getElementById("paragraph3").addEventListener("click", changeText(document.getElementById("paragraph3")));
+        document.getElementById("paragraph3").addEventListener("click", changeText);
+        //document.getElementById("paragraph3").addEventListener("click", function () { changeText(document.getElementById("paragraph3")); });
+
+        function logCounter1() {
+            console.log("Something1");
+
+            document.getElementById("counterIncrementBtn").removeEventListener("click", logCounter1);
+        }
+
+        function logCounter2() {
+            console.log("Something2");
+        }
+
+        function logCounter3() {
+            console.log("Something3");
+        }
+
+        document.getElementById("counterIncrementBtn").addEventListener("click", logCounter1);
+        document.getElementById("counterIncrementBtn").addEventListener("click", logCounter2);
+        document.getElementById("counterIncrementBtn").addEventListener("mouseover", logCounter3);
+
+        console.log("---Add Elements to DOM---");
+
+        var child = document.createElement("p");
+        var textNode = document.createTextNode("Some random text goes here");
+        child.appendChild(textNode);
+
+        document.getElementById("container").appendChild(child);
     </script>
 </body>
 
