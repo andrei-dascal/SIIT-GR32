@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // const user = {
+        //     name: 'Andrei Dascal',
+        //     userName: 'andrei.dascal',
+        //     password: 'password.123',
+
+        //     login: function (userName, password) {
+        //         if (userName === this.userName && password === this.password)
+        //             console.log('Login successfully!');
+        //         else
+        //             console.log('Login failed!');
+        //     }
+        // }
+
+        // //user.userName = 'andrei.d';
+
+        // user.login('andrei.dascal', 'password.123');
+        // user.login('andrei.dascal', 'password.1234');
+
+        class Address {
+            #country;
+            #city;
+            #addressLine1;
+            #addressLine2;
+
+            constructor(country, city, addressLine1, addressLine2) {
+                this.#country = country;
+                this.#city = city;
+                this.#addressLine1 = addressLine1;
+                this.#addressLine2 = addressLine2;
+            }
+
+            getCountry() {
+                return this.#country;
+            }
+
+            getCity() {
+                return this.#city;
+            }
+
+            getAddressLine1() {
+                return this.#addressLine1;
+            }
+
+            getAddressLine2() {
+                return this.#addressLine2;
+            }
+        }
+
+        class Person {
+            #name;
+            #uniqueIdentifier;
+            #address;
+
+            constructor(name, uniqueIdentifier, country, city, addressLine1, addressLine2) {
+                this.#name = name;
+                this.#uniqueIdentifier = uniqueIdentifier;
+                this.#address = new Address(country, city, addressLine1, addressLine2);
+                console.log("Person Constructor");
+            }
+
+            logFullAddress() {
+                console.log("Your address is: " + this.#address.getCountry() + this.#address.getCity());
+            }
+        }
+
+        const andreiD = new Person("Andrei Dascal", "123456789", "Romania", "Cluj-Napoca", "str BlaBla", "nr 21");
+        andreiD.logFullAddress();
+
+        class User {
+            #name;
+            #userName;
+            #password;
+
+            constructor(name, userName, password) {
+                this.#name = name;
+                this.#userName = userName;
+                this.#password = password;
+            }
+
+            // constructor() {
+
+            // }
+
+            // register(name, userName, password) {
+            //     this.#name = name;
+            //     this.#userName = userName;
+            //     this.#password = password;
+            // }
+
+            updatePassword(userName, currentPassword, newPassword) {
+                const isUserValid = this.#validateUser(userName, currentPassword);
+                const isPasswordValid = this.#validatePassword(newPassword);
+
+                if(isUserValid && isPasswordValid) {
+                    this.#password = newPassword;
+                }
+            }
+
+            login(userName, password) {
+                if (this.#validateUser(userName, password))
+                    console.log('Login successfully!');
+                else
+                    console.log('Login failed!');
+            }
+
+            #validateUser(userName, password) {
+                const isUserValid = userName === this.#userName && password === this.#password;
+
+                if(!isUserValid)
+                    console.log("Invalid user!");
+
+                return isUserValid;
+            }
+
+            #validatePassword(password) {
+                if(password.length < 6) {
+                    console.log("Minimun characters length: 6");
+                    return false;
+                }
+
+                return true;
+            }
+        }
+
+        class Admin extends User {
+            constructor(name, userName, password) {
+                super(name, userName, password);
+            }
+
+            login(userName, password) {
+                super.login(userName, password);
+                console.log("Admin login override");
+            }
+
+            removeUser(userID) {
+                //remove user by ID
+                console.log('User removed');
+            }
+        }
+
+        // const andreiDascal = new User();
+        // andreiDascal.login('andrei.dascal', 'password.123');
+        // andreiDascal.login('andrei.dascal', 'password.1234');
+
+        // andreiDascal.userName = 'user.test';
+        // andreiDascal.login('user.test', 'password.123');
+
+        // const andreiDascal = new User('andrei.dascal', 'andrei.dascal', 'parola.123');
+        // const goldPlay = new User('gold.play', 'gold.play', 'parola.123');
+        
+        // andreiDascal.login('andrei.dascal', 'parola.123');
+        // andreiDascal.login('ssss', 'ssss');
+        // goldPlay.login('gold.play', 'parola.123');
+
+        // const andreiDascal = new User('andrei.dascal', 'andrei.dascal', 'parola.123');
+
+        // andreiDascal.login('andrei.dascal', 'parola.123');
+        // console.log('--------');
+        // andreiDascal.updatePassword('andrei.d', 'parola.123', 'testasdasd');
+        // console.log('--------');
+        // andreiDascal.updatePassword('andrei.dascal', 'parola.1234', 'testasdasd');
+        // console.log('--------');
+        // andreiDascal.updatePassword('andrei.dascal', 'parola.123', 'test');
+        // console.log('--------');
+        // andreiDascal.login('andrei.dascal', 'parola.123');
+        // andreiDascal.updatePassword('andrei.dascal', 'parola.123', 'parola.1234');
+        // andreiDascal.login('andrei.dascal', 'parola.123');
+        // andreiDascal.login('andrei.dascal', 'parola.1234');
+    
+        const andreiAdmin = new Admin("Andrei", "admin", "parola.123");
+        andreiAdmin.login("admin", "parola.123");
+        //andreiAdmin.removeUser(1234);
+
+        // const andreiUser = new User("Andrei", "user", "parola.123");
+        // andreiUser.login("user", "parola.123");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
