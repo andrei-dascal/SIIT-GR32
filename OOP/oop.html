@@ -96,7 +96,7 @@
                 const isUserValid = this.#validateUser(userName, currentPassword);
                 const isPasswordValid = this.#validatePassword(newPassword);
 
-                if(isUserValid && isPasswordValid) {
+                if (isUserValid && isPasswordValid) {
                     this.#password = newPassword;
                 }
             }
@@ -111,14 +111,14 @@
             #validateUser(userName, password) {
                 const isUserValid = userName === this.#userName && password === this.#password;
 
-                if(!isUserValid)
+                if (!isUserValid)
                     console.log("Invalid user!");
 
                 return isUserValid;
             }
 
             #validatePassword(password) {
-                if(password.length < 6) {
+                if (password.length < 6) {
                     console.log("Minimun characters length: 6");
                     return false;
                 }
@@ -152,7 +152,7 @@
 
         // const andreiDascal = new User('andrei.dascal', 'andrei.dascal', 'parola.123');
         // const goldPlay = new User('gold.play', 'gold.play', 'parola.123');
-        
+
         // andreiDascal.login('andrei.dascal', 'parola.123');
         // andreiDascal.login('ssss', 'ssss');
         // goldPlay.login('gold.play', 'parola.123');
@@ -171,7 +171,7 @@
         // andreiDascal.updatePassword('andrei.dascal', 'parola.123', 'parola.1234');
         // andreiDascal.login('andrei.dascal', 'parola.123');
         // andreiDascal.login('andrei.dascal', 'parola.1234');
-    
+
         const andreiAdmin = new Admin("Andrei", "admin", "parola.123");
         andreiAdmin.login("admin", "parola.123");
         //andreiAdmin.removeUser(1234);
@@ -183,7 +183,6 @@
 </head>
 
 <body>
-
 </body>
 
 </html>
