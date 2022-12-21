@@ -1,0 +1,4 @@
+<h1>Header</h1>
+<p *ngIf="displaySubtitle">{{subtitle}}</p>
+<button (click)="showSubtitle()">Logo</button>
+<menu [menuText]="subtitle" (showSomethingBoolean)="showSubtitle()" (showSomethingString)="changeSubtitle($event)"></menu>

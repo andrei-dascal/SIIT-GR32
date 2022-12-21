@@ -1,0 +1,3 @@
+class Job {
+    //add properties
+}
