@@ -1,3 +1,3 @@
-class Job {
+export class Job {
     //add properties
 }

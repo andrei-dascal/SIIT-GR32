@@ -7,6 +7,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CoreService } from './services/core.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CoreService } from './services/core.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [CoreService],
   bootstrap: [AppComponent]
